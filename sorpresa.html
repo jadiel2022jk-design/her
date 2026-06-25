@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorpresa ♡</title>
+  <link rel="stylesheet" href="sorpresa.css">
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="petals-wrap" id="petals"></div>
+
+  <!-- Pantalla 0: Bienvenida -->
+  <section id="screen-welcome" class="screen active">
+    <div class="welcome-content">
+      <p class="eyebrow-large">Para ti</p>
+      <h2 class="section-title">Hola enana ♡</h2>
+      <button class="boton" id="btnEnter">Entrar</button>
+    </div>
+  </section>
+
+  <!-- Pantalla 1: Stats -->
+  <section id="screen-stats" class="screen">
+    <button class="btn-back" onclick="goBack('screen-stats', 'screen-welcome')">← Volver</button>
+    <div class="big-num" id="bigNum">365</div>
+    <div class="num-label" id="numLabel">días de amistad</div>
+    <div class="progress-dots" id="dots"></div>
+    <button class="boton" id="btnNext">Siguiente</button>
+  </section>
+
+  <!-- Pantalla 2: Anime -->
+  <section id="screen-anime" class="screen">
+    <button class="btn-back" onclick="goBack('screen-anime', 'screen-stats')">← Volver</button>
+
+    <h2 class="section-title"> Pulsa una Foto</h2>
+
+    <div class="anime-pair">
+      <button class="anime-button" id="btnAnimeA" onclick="goToGallery('a')">
+        <img id="animeA" src="" alt="Personaje 1">
+        <p class="anime-label">Yo</p>
+      </button>
+
+      <div class="anime-heart">♡</div>
+
+      <button class="anime-button" id="btnAnimeB" onclick="goToGallery('b')">
+        <img id="animeB" src="" alt="Personaje 2">
+        <p class="anime-label">Tu</p>
+      </button>
+    </div>
+  </section>
+
+  <!-- Pantalla 4: Galería B -->
+  <section id="screen-fotos-b" class="screen">
+    <button class="btn-back" onclick="goBack('screen-fotos-b', 'screen-anime')">← Volver</button>
+    <p class="section-eyebrow">recuerdos</p>
+    <h2 class="section-title">Momentos</h2>
+    <div class="foto-grid" id="fotoGridB"></div>
+    </button>
+  </section>
+
+  <!-- Pantalla 5: Mensaje -->
+  <section id="screen-msg" class="screen">
+    <button class="btn-back" onclick="goBack('screen-msg', 'screen-anime')">← Volver</button>
+
+    <div class="msg-card">
+      <p class="msg-text">
+         Gracias por tu amistad y hacer que este año se sienta especial <br>
+      <br>
+        
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="msg-sub">
+        Gracias por estar aquí ♡
+      </p>
+    </div>
+
+    <div class="heart-footer">
+      <span class="heart">♥</span>
+      &nbsp; Siempre &nbsp;
+      <span class="heart">♥</span>
+    </div>
+  </section>
+
+  <script src="fotos.js"></script>
+  <script src="sorpresa.js"></script>
+</body>
+</html>
